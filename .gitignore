@@ -1,0 +1,24 @@
+# Local planning notes (may hold unpublished, unconfirmed facts)
+.scratch/
+
+# Dependencies and build output
+node_modules/
+dist/
+.astro/
+.wrangler/
+.moon/cache/
+
+# Secrets
+.env
+.env.*
+.dev.vars*
+
+# Apple signing material: never in this public repo
+*.p8
+*.p12
+*.cer
+*.mobileprovision
+*.provisionprofile
+
+# OS
+.DS_Store
