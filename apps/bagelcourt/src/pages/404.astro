@@ -1,14 +1,15 @@
 ---
-// ponytail: Phase 1 placeholder so not_found_handling "404-page" can be verified; real page in Phase 2.
+import Base from '@/layouts/Base.astro';
+import { LinkButton } from '@/components/LinkButton';
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Page not found · BagelCourt</title>
-  </head>
-  <body>
+{/* No path: the layout marks this page noindex and gives it no canonical URL. */}
+<Base title="Page not found · BagelCourt" description="This page doesn't exist on the BagelCourt site.">
+  <article class="typeset">
     <h1>Page not found</h1>
-  </body>
-</html>
+    <p>This page doesn't exist or has moved.</p>
+  </article>
+  <div class="mt-8">
+    <LinkButton href="/" label="Go to the home page" />
+  </div>
+</Base>

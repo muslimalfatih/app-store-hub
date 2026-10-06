@@ -1,0 +1,30 @@
+---
+import Base from '@/layouts/Base.astro';
+import SupportFaq from '@/components/SupportFaq';
+---
+
+<Base
+  title="Support · BagelCourt"
+  description="Help with BagelCourt, the tennis scorekeeper for iPhone: contact email and answers to common questions."
+  path="/support"
+>
+  <article class="typeset">
+    <h1>Support</h1>
+    <p>
+      BagelCourt keeps score for singles and doubles. It follows the rules for you: deuce and
+      advantage, tiebreaks, who serves next, and when a set or the match is over. It works offline,
+      doesn't need an account, and stores your matches on the device.
+    </p>
+    <h2>Contact</h2>
+    {/* Link kept on the same line as its lead-in: Astro's HTML compression drops a line break before an inline element, which glued "email" to the address. */}
+    <p>For questions, problems or feedback, email <a href="mailto:hi@muslimalfatih.com">hi@muslimalfatih.com</a>.</p>
+    <h2>Frequently asked questions</h2>
+  </article>
+  {/* -mx-3 cancels the accordion rows' px-3 so the questions line up with the headings; the hover highlight still reaches past the text. */}
+  <div class="-mx-3 mt-3">
+    <SupportFaq client:visible />
+  </div>
+  <p class="typeset mt-8">
+    How BagelCourt handles your data is explained in the <a href="/privacy">privacy policy</a>.
+  </p>
+</Base>

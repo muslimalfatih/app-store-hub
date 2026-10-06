@@ -1,14 +1,31 @@
 ---
-// ponytail: Phase 1 placeholder; real home page lands in Phase 2.
+import Base from '@/layouts/Base.astro';
+import { LinkButton } from '@/components/LinkButton';
+import { typeClass } from '@/lib/type-scale';
+import { fontWeights } from '@/lib/font-weight';
+
+// Stays empty until the app is live on the App Store. Then set it to
+// https://apps.apple.com/app/id<APP_ID> and swap the text link for Apple's
+// official "Download on the App Store" badge artwork.
+const appStoreUrl = '';
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>BagelCourt</title>
-  </head>
-  <body>
-    <h1>BagelCourt</h1>
-  </body>
-</html>
+<Base
+  title="BagelCourt: tennis scorekeeper for iPhone"
+  description="A tennis scorekeeper for iPhone. You tap who won the point, and the app keeps the score."
+  path="/"
+>
+  <h1 class={typeClass('display')} style={`font-variation-settings: ${fontWeights.bold}`}>BagelCourt</h1>
+  <p class={`mt-3 max-w-prose text-muted-foreground ${typeClass('title')}`}>
+    A tennis scorekeeper for iPhone. You tap who won the point, and the app keeps the score.
+  </p>
+  <div class="mt-8 flex flex-wrap gap-3">
+    <LinkButton href="/support" label="Support" />
+    <LinkButton href="/privacy" label="Privacy Policy" variant="tertiary" />
+  </div>
+  {appStoreUrl && (
+    <p class="mt-8">
+      <a href={appStoreUrl}>Download on the App Store</a>
+    </p>
+  )}
+</Base>
