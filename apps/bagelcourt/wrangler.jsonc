@@ -1,7 +1,7 @@
 // Assets-only Worker on the Workers Free plan: no "main", no adapter, no run_worker_first.
 // "name" must match the Worker name in the Cloudflare dashboard.
 {
-  "name": "bagelcourt-site",
+  "name": "bagelcourt",
   "compatibility_date": "2026-10-06",
   "workers_dev": false,
   // Project-level opt-out of Wrangler usage telemetry. As of wrangler 4.147.0, `wrangler deploy`
