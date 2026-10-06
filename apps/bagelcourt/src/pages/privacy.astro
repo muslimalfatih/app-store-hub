@@ -1,0 +1,81 @@
+---
+// DRAFT, NOT APPROVED: planning ticket 09 (Share → Save Image on a real iPhone)
+// is still open. The "Permissions" paragraph depends on its answer. Don't commit
+// or deploy this page until ticket 09 is answered and the text is approved.
+// Every other statement is a user-confirmed fact from planning ticket 05.
+import Base from '@/layouts/Base.astro';
+
+// Set to the day the approved policy is published.
+const lastUpdated = new Date('2026-10-07T00:00:00Z');
+const lastUpdatedLabel = lastUpdated.toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+  timeZone: 'UTC',
+});
+---
+
+<Base
+  title="Privacy Policy · BagelCourt"
+  description="How BagelCourt handles your data: your matches stay on your iPhone, with no account, no tracking, no analytics and no ads."
+  path="/privacy"
+>
+  <article class="typeset">
+    <h1>Privacy Policy</h1>
+    <p>Last updated: <time datetime={lastUpdated.toISOString().slice(0, 10)}>{lastUpdatedLabel}</time></p>
+    <p>
+      This policy explains how BagelCourt, the tennis scorekeeping app for iPhone, handles your
+      information. In short: BagelCourt doesn't collect, sell or track any personal data.
+    </p>
+
+    <h2>Your matches stay on your iPhone</h2>
+    <p>
+      Your match history, player names and scores are stored only on your iPhone. BagelCourt
+      doesn't sync them to iCloud or any other cloud service, and doesn't send them to us.
+    </p>
+
+    <h2>No account</h2>
+    <p>You don't need an account to use BagelCourt, and there is no sign-in of any kind.</p>
+
+    <h2>No tracking, analytics or ads</h2>
+    <p>
+      BagelCourt doesn't collect, sell or track personal data. It contains no third-party
+      analytics, advertising, crash-reporting tools or cloud sync.
+    </p>
+
+    <h2>Sharing a scorecard</h2>
+    <p>
+      When you share a scorecard, BagelCourt creates an image of the result, including the player
+      names and score, and opens the iOS share sheet. You choose where the image goes. Nothing is
+      sent to us.
+    </p>
+
+    <h2>Permissions</h2>
+    <p>
+      BagelCourt doesn't use your camera or your photo library, and it doesn't ask for any other
+      permission, such as location, notifications or Health.
+    </p>
+
+    <h2>Deleting your data</h2>
+    <p>
+      To delete a match, swipe left on it in your match history and tap Delete, or touch and hold
+      it and choose Delete Match. You're asked to confirm first, and a deleted match can't be
+      recovered. Deleting the app deletes all of its matches. Copies kept in your iPhone's backups
+      (iCloud Backup or a computer) are managed by Apple and follow your backup settings.
+    </p>
+
+    <h2>Children's privacy</h2>
+    <p>BagelCourt doesn't collect data from anyone, including children.</p>
+
+    <h2>Changes to this policy</h2>
+    <p>
+      If this policy changes, the new version will be posted on this page with a new "Last
+      updated" date.
+    </p>
+
+    <h2>Contact</h2>
+    <p>
+      Questions about privacy: <a href="mailto:hi@muslimalfatih.com">hi@muslimalfatih.com</a>
+    </p>
+  </article>
+</Base>
