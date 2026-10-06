@@ -1,0 +1,19 @@
+# Inherited by every project tagged 'astro' (each app's moon.yml).
+inheritedBy:
+  tags: ['astro']
+
+fileGroups:
+  astro: ['public/**/*', 'src/**/*', 'astro.config.*', 'tsconfig.json', 'package.json']
+
+tasks:
+  dev:
+    command: 'astro dev'
+    preset: 'server'
+  check:
+    command: 'astro check'
+    inputs: ['@group(astro)']
+  build:
+    command: 'astro build'
+    deps: ['~:check']
+    inputs: ['@group(astro)']
+    outputs: ['dist/']

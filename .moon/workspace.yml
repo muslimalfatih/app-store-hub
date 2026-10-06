@@ -1,0 +1,9 @@
+# moon v2. Projects are anchored on moon.yml so stray files never become projects.
+projects:
+  - 'apps/*/moon.yml'
+  - 'packages/*/moon.yml'
+
+vcs:
+  defaultBranch: 'main'
+
+telemetry: false

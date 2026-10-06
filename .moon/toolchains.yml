@@ -1,0 +1,6 @@
+# No versions on purpose: moon uses the Node and pnpm on PATH and never downloads its own.
+# Pins live in .nvmrc (Node) and package.json "packageManager" (pnpm).
+javascript:
+  packageManager: 'pnpm'
+node: {}
+pnpm: {}
